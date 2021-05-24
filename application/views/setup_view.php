@@ -103,6 +103,18 @@
 
 						</select>
 					<?php } ?>
+					<?php if ($dat->karakter == 'kar_07') { ?>
+						<label class="input-group-text" for="kar_07">Options</label>
+						<select class="form-select" id="kar_07" name="kar_07">
+							<option selected value='null'><?php echo $dat->karakter ?></option>
+							<option value="1"><?php echo $dat->option_1 ?></option>
+							<option value="2"><?php echo $dat->option_2 ?></option>
+							<?php if ($dat->option_3 > 1) { ?>
+								<option value="3"><?php echo $dat->option_3 ?></option>
+							<?php } ?>
+
+						</select>
+					<?php } ?>
 
 				<?php } ?>
 				<button type="submit" class="btn btn-primary">Submit</button>
@@ -112,26 +124,43 @@
 		<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
 			<thead>
-				<?php $no = 1;
-				foreach ($sam as $aa) { ?>
-					<tr>
 
-						<th>No</th>
-						<th>blog_author</th>
-						<th>blog_description</th>
-						<th>kar_01</th>
-						<th>kar_02</th>
-						<th>kar_03</th>
-						<th>kar_04</th>
-						<?php if (!empty($aa->kar == 'kar_05')) { ?>
-							<th>kar_05</th>
-						<?php } ?>
-						<?php if (!empty($aa->kar == 'kar_06')) { ?>
-							<th>kar_06</th>
+				<tr>
+					<th>No</th>
+					<th>blog_author</th>
+					<th>blog_description</th>
+					<th>kar_01</th>
+					<th>kar_02</th>
+					<th>kar_03</th>
+					<th>kar_04</th>
+					<?php foreach ($sam as $sa) { ?>
+						<?php if ($sa->kar == 'kar_05') { ?>
+
+							<th>
+								<?php echo $sa->nama; ?>
+							</th>
 						<?php } ?>
 
-					</tr>
-				<?php } ?>
+					<?php } ?>
+					<?php foreach ($sam as $sa) { ?>
+						<?php if ($sa->kar == 'kar_06') { ?>
+
+							<th>
+								<?php echo $sa->nama; ?>
+							</th>
+						<?php } ?>
+
+					<?php } ?>
+					<?php foreach ($sam as $sa) { ?>
+						<?php if ($sa->kar == 'kar_07') { ?>
+
+							<th>
+								<?php echo $sa->nama; ?>
+							</th>
+						<?php } ?>
+
+					<?php } ?>
+				</tr>
 
 			</thead>
 			<tbody>
