@@ -79,12 +79,12 @@ class Setup extends CI_Controller
 	function create_kolom()
 	{
 
-		$karakter = $this->input->post('karakter');
+		$kar = $this->input->post('kar');
 		$option_1 = $this->input->post('option_1');
 		$option_2 = $this->input->post('option_2');
 
 		$data = array(
-			'karakter' => $karakter,
+			'kar' => $kar,
 			'option_1' => $option_1,
 			'option_2' => $option_2
 		);
@@ -110,8 +110,8 @@ class Setup extends CI_Controller
 		$kar_04 = $this->input->post('kar_04');
 		$kar_05 = $this->input->post('kar_05');
 		$kar_06 = $this->input->post('kar_06');
-		// $kar_07 = $this->input->post('kar_07');
-		// $kar_08 = $this->input->post('kar_08');
+		$kar_07 = $this->input->post('kar_07');
+		$kar_08 = $this->input->post('kar_08');
 		// $kar_09 = $this->input->post('kar_09');
 
 
@@ -121,7 +121,10 @@ class Setup extends CI_Controller
 			'kar_03' => $kar_03,
 			'kar_04' => $kar_04,
 			'kar_05' => $kar_05,
-			'kar_06' => $kar_06
+			'kar_06' => $kar_06,
+			'kar_07' => $kar_07,
+			'kar_08' => $kar_08
+
 		);
 		// if ('kar_08' > 0) {
 		// 	$data = array(
