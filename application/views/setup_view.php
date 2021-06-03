@@ -142,77 +142,15 @@
 					<th>No</th>
 					<th>blog_author</th>
 					<th>blog_description</th>
-					<?php foreach ($data as $sa) { ?>
-						<?php if ($sa->kar == 'kar_01') { ?>
-
-							<th>
-								<?php echo $sa->kar; ?>
-							</th>
+					<?php
+					foreach ($data as $sa) {
+						for ($i = 0; $i < 99; $i++) { ?>
+							<?php if ($sa->kar == "kar_$i") { ?>
+								<th>
+									<?php echo $sa->kar; ?>
+								</th>
+							<?php } ?>
 						<?php } ?>
-
-					<?php } ?>
-					<?php foreach ($data as $sa) { ?>
-						<?php if ($sa->kar == 'kar_02') { ?>
-
-							<th>
-								<?php echo $sa->kar; ?>
-							</th>
-						<?php } ?>
-
-					<?php } ?>
-					<?php foreach ($data as $sa) { ?>
-						<?php if ($sa->kar == 'kar_03') { ?>
-
-							<th>
-								<?php echo $sa->kar; ?>
-							</th>
-						<?php } ?>
-
-					<?php } ?>
-					<?php foreach ($data as $sa) { ?>
-						<?php if ($sa->kar == 'kar_04') { ?>
-
-							<th>
-								<?php echo $sa->nama; ?>
-							</th>
-						<?php } ?>
-
-					<?php } ?>
-					<?php foreach ($data as $sa) { ?>
-						<?php if ($sa->kar == 'kar_05') { ?>
-
-							<th>
-								<?php echo $sa->nama; ?>
-							</th>
-						<?php } ?>
-
-					<?php } ?>
-					<?php foreach ($data as $sa) { ?>
-						<?php if ($sa->kar == 'kar_06') { ?>
-
-							<th>
-								<?php echo $sa->nama; ?>
-							</th>
-						<?php } ?>
-
-					<?php } ?>
-					<?php foreach ($data as $sa) { ?>
-						<?php if ($sa->kar == 'kar_07') { ?>
-
-							<th>
-								<?php echo $sa->nama; ?>
-							</th>
-						<?php } ?>
-
-					<?php } ?>
-					<?php foreach ($data as $sa) { ?>
-						<?php if ($sa->kar == 'kar_08') { ?>
-
-							<th>
-								<?php echo $sa->nama; ?>
-							</th>
-						<?php } ?>
-
 					<?php } ?>
 				</tr>
 
