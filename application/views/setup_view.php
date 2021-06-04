@@ -30,6 +30,9 @@
 		<a href="<?php echo base_url() . 'index.php/setup/create_table_blog' ?>" class="btn btn-success">Create Table Blog</a>
 		<form class="user" method="post" action="<?= base_url('index.php/setup/add'); ?>">
 			<div class="form-group">
+				
+				//lets see something diffrent bruh
+				
 				<?php foreach ($data as $dat) { ?>
 					<?php if ($dat->kar == 'kar_01') { ?>
 						<label class="input-group-text" for="kar_01">Options</label>
